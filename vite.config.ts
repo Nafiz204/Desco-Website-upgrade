@@ -3,11 +3,13 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import {defineConfig} from 'vite';
 
+const githubRepository = process.env.GITHUB_REPOSITORY?.split('/').pop();
+const basePath = githubRepository ? `/${githubRepository}/` : './';
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  // Set the base path to the repository name if deploying to GitHub Pages
-  // Example: base: '/desco-monitor/'
-  base: './', 
+  // Use the repo name on GitHub Pages and relative paths locally.
+  base: basePath,
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
