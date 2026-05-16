@@ -1,0 +1,6 @@
+{
+  "name": "Desco Monitor",
+  "description": "A monitoring application for DESCO power status, schedules, and utility management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
